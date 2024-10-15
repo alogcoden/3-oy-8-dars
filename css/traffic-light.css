@@ -1,0 +1,69 @@
+/* Общие стили для всех экранов */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.light {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+/* Десктоп: экраны с шириной более 1024px */
+@media (max-width: 1024px) {
+  .light {
+    width: 80px;
+    height: 80px;
+  }
+  .red {
+    background-color: red;
+  }
+}
+
+/* Рабочий стол: экраны с шириной менее 1024px */
+@media (max-width: 642px) {
+  .light {
+    width: 60px;
+    height: 60px;
+  }
+
+  .red {
+    background-color: gray;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+}
+
+/* Мобильный экран: экраны с шириной менее 375px */
+@media (max-width: 375px) {
+  .light {
+    width: 40px;
+    height: 40px;
+  }
+
+  .yellow {
+    background-color: gray;
+  }
+
+  .green {
+    background-color: green;
+  }
+}
